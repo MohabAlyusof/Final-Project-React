@@ -1,8 +1,13 @@
 import React from "react";
-import { Routes } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Doctors from "./Pages/Doctors";
 import Login from "./Pages/Login";
+import About from "./Pages/About";
+import Contact from "./Pages/Contact";
 import MyProfile from "./Pages/MyProfile";
 import MyAppointments from "./Pages/MyAppointments";
+import Appointment from "./Pages/Appointment";
 
 function App() {
   return (
