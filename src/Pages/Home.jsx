@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../Components/Header'
 import SpecialityMenu from '../Components/SpecialityMenu'
+import TopDoctors from '../Components/TopDoctors'
 
 
 function Home() {
@@ -8,6 +9,7 @@ function Home() {
     <div>
       <Header />
       <SpecialityMenu />
+      <TopDoctors />
     </div>
   )
 }
