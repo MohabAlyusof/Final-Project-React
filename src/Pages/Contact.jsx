@@ -1,6 +1,6 @@
 import React from 'react'
 
-function content() {
+function contact() {
   return (
     <div>
       
@@ -8,4 +8,4 @@ function content() {
   )
 }
 
-export default content
+export default contact
