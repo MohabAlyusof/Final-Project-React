@@ -7,7 +7,7 @@ const Navbar = () => {
 
   const [showMenu, setShowMenu] = useState(false);
   const [token, setToken] = useState(true);
-
+  
   return (
     <div className="flex justify-between items-center text-sm py-4 mb-5 border-b-gray-400">
       <img onClick={()=>navigate('/')} className="w-44 cursor-pointer" src={assets.logo} alt="assets" />
