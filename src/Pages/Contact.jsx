@@ -19,10 +19,10 @@ const Contact = () => {
         <div className="flex flex-col justify-center items-start gap-6">
           <p className=" font-semibold text-lg text-gray-600">OUR OFFICE</p>
           <p className=" text-gray-500">
-            54709 Willms Station <br /> Suite 350, Washington, USA
+            31134 Hildesheim <br /> Alter Markt 12, Lower Saxony, Germany
           </p>
           <p className=" text-gray-500">
-            Tel: (415) 555-0132 <br /> Email: greatstackdev@gmail.com
+            Tel: +49157591055552 <br /> Email:Prescripto@Prescripto.com
           </p>
           <p className=" font-semibold text-lg text-gray-600">
             CAREERS AT PRESCRIPTO
