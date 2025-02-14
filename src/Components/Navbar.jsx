@@ -17,7 +17,7 @@ const Navbar = () => {
         alt=""
       />
       <ul className="md:flex items-start gap-5 font-medium hidden">
-        <NavLink to="/">
+        <NavLink to="/home">
           <li className="py-1">HOME</li>
           <hr className="border-none outline-none h-0.5 bg-primary w-3/5 m-auto hidden" />
         </NavLink>
