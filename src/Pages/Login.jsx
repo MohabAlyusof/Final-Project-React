@@ -1,16 +1,21 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
+import { AppContext } from '../Context/AppContext'
 
 const Login = () => {
 
   const [state, setState] = useState('Sign Up')
-
+  const { login, register} = useContext(AppContext)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-
+    if (state === 'Sign Up') {
+      register(name, email, password)
+    } else {
+      login(email, password)
+    }
   }
 
   return (
