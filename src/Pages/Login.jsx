@@ -11,10 +11,14 @@ const Login = () => {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
+    const userName = name;
+    const userEmail = email;
+    const userPassword = password;
+    
     if (state === 'Sign Up') {
-      register(name, email, password)
+      register(userName, userEmail, userPassword)
     } else {
-      login(email, password)
+      login(userEmail, userPassword)
     }
   }
 
