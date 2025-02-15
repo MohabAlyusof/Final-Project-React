@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { assets } from "../assets/assets";
 import { NavLink, useNavigate } from "react-router-dom";
 
@@ -7,6 +7,14 @@ const Navbar = () => {
 
   const [showMenu, setShowMenu] = useState(false);
   const [token, setToken] = useState(true);
+
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (storedUser) {
+      setToken(true);
+    }
+  }
+  , []);
 
   return (
     <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
@@ -107,6 +115,24 @@ const Navbar = () => {
             <NavLink onClick={() => setShowMenu(false)} to="/contact">
               <p className="px-4 py-2 rounded full inline-block">CONTACT</p>
             </NavLink>
+            {token ? (
+              <NavLink onClick={() => setShowMenu(false)} to="/my-profile">
+                <p className="px-4 py-2 rounded full inline-block">My Profile</p>
+              </NavLink>
+            ) : (
+              <NavLink onClick={() => setShowMenu(false)} to="/login">
+                <p className="px-4 py-2 rounded full inline-block">Create account</p>
+              </NavLink>
+            )}
+            {token ? (
+              <NavLink onClick={() => setShowMenu(false)} to="/my-profile">
+                <p className="px-4 py-2 rounded full inline-block">My Profile</p>
+              </NavLink>
+            ) : (
+              <NavLink onClick={() => setShowMenu(false)} to="/login">
+                <p className="px-4 py-2 rounded full inline-block">Create account</p>
+              </NavLink>
+            )}
           </ul>
         </div>
       </div>
