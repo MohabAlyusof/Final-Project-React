@@ -4,23 +4,24 @@ import { doctors } from '../assets/assets';
 export const AppContext = createContext();
 
 const AppContextProvider = (props) => {
-    function login(username, password) {
+    function login(email, password) {
         const storedUser = JSON.parse(localStorage.getItem("currentUser"));
         if (!storedUser) {
-            return "No user found. Please register first.";
+            return { success: false, message: "No user found. Please register first." };
         }
-        if (storedUser.username === username && storedUser.password === password) {
-            return "Login successful!";
+        if (storedUser.email === email && storedUser.password === password) {
+            return { success: true, message: "Login successful!" };
         } else {
-            return "Invalid username or password.";
+            return { success: false, message: "Invalid email or password." };
         }
     }
-    function register(username, password) {
+
+    function register(name, email, password) {
         if (localStorage.getItem("currentUser")) {
-            return "A user is already registered. Please log in.";
+            return { success: false, message: "A user is already registered. Please log in." };
         }
-        localStorage.setItem("currentUser", JSON.stringify({ username, password }));
-        return "Registration successful!";
+        localStorage.setItem("currentUser", JSON.stringify({ name, email, password }));
+        return { success: true, message: "Registration successful!" };
     }
 
     const value = {
