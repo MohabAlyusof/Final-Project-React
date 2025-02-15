@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useState, useEffect } from 'react'
 import { AppContext } from '../Context/AppContext'
 
 const Login = () => {
@@ -9,18 +9,24 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("currentUser"));
+    if (storedUser) {
+      setEmail(storedUser.email);
+      setPassword(storedUser.password);
+    }
+  }, []);
+
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    const userName = name;
-    const userEmail = email;
-    const userPassword = password;
-    
-    if (state === 'Sign Up') {
-      register(userName, userEmail, userPassword)
+    if (state === "Sign Up") {
+      const response = register(name, email, password);
+      alert(response.message);
     } else {
-      login(userEmail, userPassword)
+      const response = login(email, password);
+      alert(response.message);
     }
-  }
+  } 
 
   return (
     <form onSubmit={onSubmitHandler} className='min-h-[80vh] flex items-center'>
