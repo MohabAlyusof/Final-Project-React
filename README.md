@@ -69,7 +69,13 @@ frontend/
 ├── src/
 │   ├── assets/
 │   ├── components/
-│   │   ├── Navbar.jsx
+│   │   ├── Banner.jsx
+│   │   ├── Footer.jsx    
+│   │   ├── Header.jsx  
+│   │   ├── Navbar.jsx  
+│   │   ├── RelatedDoctor.jsx  
+│   │   ├── SpecialityMenu.jsx  
+│   │   ├── TopDoctors.jsx  
 │   ├── context/
 │   │   ├── AppContext.jsx
 │   ├── pages/
@@ -77,7 +83,10 @@ frontend/
 │   │   ├── Doctors.jsx
 │   │   ├── Login.jsx
 │   │   ├── MyProfile.jsx
-│   │   ├── MyAppointments.jsx
+│   │   ├── About.jsx
+│   │   ├── Contact.jsx
+│   │   ├── Appointments.jsx
+│   │   ├── MyProfile.jsx
 │   ├── App.jsx
 │   ├── index.js
 ├── package.json
