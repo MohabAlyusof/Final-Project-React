@@ -1,105 +1,87 @@
-Prescripto Frontend project
 
-Project Overview
+# Prescripto Frontend
 
-Goal
+## Project Overview
+Prescripto Frontend is a React-based web application built with Vite and Tailwind CSS, designed to modernize prescription management. It provides an intuitive user interface to manage medical prescriptions efficiently. The frontend is fast, scalable, and ensures an excellent user experience.
 
-The primary goal of Prescripto Frontend is to simplify and modernize prescription management by providing a seamless digital interface. It aims to enhance efficiency, reduce paperwork, and improve accessibility for both healthcare providers and patients. By leveraging modern web technologies, the project ensures a fast, scalable, and user-friendly experience.
+## Goal
+The primary goal of Prescripto Frontend is to simplify prescription management through a digital interface. It enhances efficiency, reduces paperwork, and improves accessibility for healthcare providers and patients alike.
 
-Prescripto Frontend is a React-based web application built using Vite and Tailwind CSS. It provides a responsive and scalable UI for managing prescriptions and related medical data. The project aims to streamline the prescription management process by offering an intuitive user interface and a seamless user experience.
+## Features
+- Fast and lightweight frontend using Vite.
+- Modern UI styled with Tailwind CSS.
+- Component-based architecture for maintainability and scalability.
+- ESLint integration to maintain high code quality.
+- Responsive design for accessibility on various devices.
+- Easily customizable and extendable for future enhancements.
 
-Features
+## Live Demo
+Experience the application live at: [Prescripto Live Demo](https://final-project-react-df07.onrender.com/)
 
--Fast and lightweight frontend using Vite.
+## Installation
 
--Styled with Tailwind CSS for a modern UI.
+- Node.js
+- npm
 
--Component-based architecture for better maintainability.
+### Steps
+1. Clone the repository using one of the following methods:
+    ```sh
+    git clone https://github.com/MohabAlyusof/Final-Project-React.git
+    ```
+    or
+    ```sh
+    git clone git@github.com:MohabAlyusof/Final-Project-React.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd Final-Project-React
+    ```
+3. Install dependencies:
+    ```sh
+    npm install
+    ```
 
--ESLint integration for code quality.
-
--Easily customizable and extendable for future enhancements.
-
-Installation
-
-Prerequisites
-
-Node.js 
-
-npm 
-
-Steps
-
-Clone the repository:
-
-git clone : https://github.com/MohabAlyusof/Final-Project-React.git
-git clone : git@github.com:MohabAlyusof/Final-Project-React.git
-
-Live demo by using Render : https://final-project-react-df07.onrender.com/
-
-
-Install dependencies:
-
-npm install
-
-Running the Project
-
-To start the development server, run:
-
+## Running the Project
+Start the development server with:
+```sh
 npm run dev
-
+```
 Then, open your browser and go to:
-http://localhost:5174/home
+[http://localhost:5174/home](http://localhost:5174/home)
 
-Technologies Used
+## Technologies Used
+- **React** - Component-based UI development.
+- **Vite** - Fast development and build tool.
+- **Tailwind CSS** - Utility-first styling framework.
+- **ESLint** - Code quality enforcement.
 
--React - Component-based UI development
+## Project Explanation
+Prescripto Frontend is built to provide an easy-to-use interface for managing medical prescriptions. It offers the following benefits:
+- View and manage prescriptions efficiently.
+- Responsive design for better accessibility on various devices.
+- High maintainability with modular and reusable components.
 
--Vite - Fast development and build tool
-
--Tailwind CSS - Utility-first styling
-
--ESLint - Code quality enforcement
-
-Project Explanation
-
-Prescripto Frontend is designed to be a user-friendly interface for handling medical prescriptions. It allows users to:
-
-View and manage prescriptions efficiently.
-
-Integrate with backend services for data retrieval and updates.
-
-Use a responsive design for better accessibility on various devices.
-
-The project structure follows a modular approach, ensuring that components are reusable and maintainable. Vite provides a fast development environment, while Tailwind CSS ensures a consistent design system. ESLint helps maintain high-quality code standards.
-
-Project Structure
-
-The project structure is organized as follows:
-
+## Project Structure
+```
 frontend/
 ├── public/
 │   ├── index.html
-│   └── ...
 ├── src/
 │   ├── assets/
-│   │   └── ...
 │   ├── components/
 │   │   ├── Navbar.jsx
-│   │   └── ...
 │   ├── context/
 │   │   ├── AppContext.jsx
-│   │   └── ...
 │   ├── pages/
 │   │   ├── Home.jsx
 │   │   ├── Doctors.jsx
 │   │   ├── Login.jsx
 │   │   ├── MyProfile.jsx
 │   │   ├── MyAppointments.jsx
-│   │   └── ...
 │   ├── App.jsx
 │   ├── index.js
-│   └── ...
 ├── package.json
 ├── tailwind.config.js
-└──
+```
+
+
