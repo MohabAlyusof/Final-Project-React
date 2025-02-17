@@ -17,7 +17,9 @@ const AppContextProvider = (props) => {
     }
 
     function register(name, email, password) {
-        if (localStorage.getItem("currentUser")) {
+        const storedUser = JSON.parse(localStorage.getItem("currentUser"));
+        if (storedUser.email === email && storedUser.password === password
+        ) {
             return { success: false, message: "A user is already registered. Please log in." };
         }
         localStorage.setItem("currentUser", JSON.stringify({ name, email, password }));
