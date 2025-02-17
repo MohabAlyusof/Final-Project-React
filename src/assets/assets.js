@@ -160,7 +160,11 @@ export const doctors = [
         _id: 'doc6',
         name: 'Dr. Andrew Williams',
         image: doc6,
+<<<<<<< HEAD
         speciality: 'Gastroenterologist',
+=======
+        speciality: 'Neurologist',
+>>>>>>> e5f47b1 (Add now file)
         degree: 'MBBS',
         experience: '4 Years',
         about: 'Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
@@ -244,7 +248,11 @@ export const doctors = [
         _id: 'doc12',
         name: 'Dr. Patrick Harris',
         image: doc12,
+<<<<<<< HEAD
         speciality: 'Gastroenterologist',
+=======
+        speciality: 'Neurologist',
+>>>>>>> e5f47b1 (Add now file)
         degree: 'MBBS',
         experience: '4 Years',
         about: 'Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.',
