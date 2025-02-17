@@ -30,7 +30,7 @@ const Appointment = () => {
 
       let endTime = new Date();
       endTime.setDate(today.getDate() + i);
-      endTime.setHours(21, 0, 0, 0);
+      endTime.setHours(24, 0, 0, 0);
 
       if (today.getDate() === currentDate.getDate()) {
         currentDate.setHours(
@@ -115,7 +115,7 @@ const Appointment = () => {
             </p>
           </div>
           <p className="text-gray-500 font-medium mt-4">
-            Appointment fee:{" "}€
+            Appointment fee: €
             <span className="text-gray-600">
               {currencySymbol}
               {docInfo.fees}
