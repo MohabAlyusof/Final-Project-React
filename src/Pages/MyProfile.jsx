@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { assets } from '../assets/assets'
 
 const MyProfile = () => {
 
     const [isEdit, setIsEdit] = useState(false)
-
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'))
     const [userData, setUserData] = useState({
         name: "Richard James",
         image: assets.profile_pic,
@@ -17,7 +17,13 @@ const MyProfile = () => {
         gender: 'Male',
         dob: '2000-01-20'
     })
-
+    
+    useEffect(() => {
+        if (currentUser) {
+            setUserData((prev) => ({ ...prev, ...currentUser }))
+        }
+    }
+    , [])
     return (
         <div className='max-w-lg flex flex-col gap-2 text-sm'>
             <img className='w-36 rounded' src={userData.image} alt="" />
