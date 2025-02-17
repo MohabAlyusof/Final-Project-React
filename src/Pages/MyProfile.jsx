@@ -6,16 +6,16 @@ const MyProfile = () => {
     const [isEdit, setIsEdit] = useState(false)
     const currentUser = JSON.parse(localStorage.getItem('currentUser'))
     const [userData, setUserData] = useState({
-        name: "Richard James",
-        image: assets.profile_pic,
-        email: 'richardjames@gmail.com',
-        phone: '+1  123 456 7890',
+        name: "",
+        image: assets.upload_area,
+        email: '',
+        phone: '',
         address: {
-            line1: '57th Cross, Richmond',
-            line2: 'Circle, Church Road, London',
+            line1: '',
+            line2: '',
         },
-        gender: 'Male',
-        dob: '2000-01-20'
+        gender: '',
+        dob: ''
     })
     
     useEffect(() => {
@@ -36,8 +36,8 @@ const MyProfile = () => {
             <hr className='bg-zinc-400 h-[1px] border-none' />
             <div>
                 <p className='text-neutral-500 underline mt-3'>CONTACT INFORMATION</p>
-                <div className='grid grid-cols-[1fr_3fr] gap-y-2.5 mt-3 text-neutral-700'>
-                    <p className='font-medium'>Email id:</p>
+                <div className='grid grid-cols-[1fr_5fr] gap-y-2.5 mt-3 text-neutral-700'>
+                    <p className='font-medium'>Email :</p>
                     <p className='text-blue-500'>{userData.email}</p>
                     <p className='font-medium'>Phone:</p>
                     {isEdit

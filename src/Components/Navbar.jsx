@@ -2,21 +2,25 @@ import React, { useState, useEffect, useContext } from "react";
 import { assets } from "../assets/assets";
 import { NavLink, useNavigate } from "react-router-dom";
 import { AppContext } from "../Context/AppContext";
+
 const Navbar = () => {
   const navigate = useNavigate();
   const { currentUser, setCurrentUser } = useContext(AppContext);
   const [showMenu, setShowMenu] = useState(false);
+
   useEffect(() => {
     const loggedInUser = JSON.parse(localStorage.getItem('currentUser'));
     if (loggedInUser) {
       setCurrentUser(loggedInUser);
     }
   }, [setCurrentUser]);
+
   const handleLogout = () => {
     localStorage.removeItem('currentUser');
     setCurrentUser(null);
     navigate('/');
   };
+
   return (
     <div className="flex items-center justify-between text-sm py-4 mb-5 border-b border-b-gray-400">
       <img
@@ -46,7 +50,7 @@ const Navbar = () => {
       <div className="flex items-center gap-4">
         {currentUser ? (
           <div className="flex items-center gap-2 cursor-pointer group relative">
-            <img className="w-8 rounded-full" src={assets.profile_pic} alt="" />
+            <img className="w-8 rounded-full" src={assets.upload_area} alt="" />
             <img className="w-2.5" src={assets.dropdown_icon} alt="" />
             <div className="absolute top-0 right-0 pt-14 text-base font-medium text-gray-600 z-20 hidden group-hover:block">
               <div className="min-w-48 bg-stone-100 rounded flex flex-col gap-4 p-4">
