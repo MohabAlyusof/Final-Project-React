@@ -42,12 +42,10 @@ Experience the application live at: [Prescripto Live Demo](https://final-project
     ```
 
 ## Running the Project
-Start the development server with:
+Start the Project with:
 ```sh
 npm run dev
 ```
-Then, open your browser and go to:
-[http://localhost:5174/home](http://localhost:5174/home)
 
 ## Technologies Used
 - **React** - Component-based UI development.
